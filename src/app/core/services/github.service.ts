@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from "@angular/common/http";
 
 @Injectable({
@@ -7,8 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class GithubService {
 
-  constructor(private httpClient:HttpClient) { 
-    console.log("Github service started");
+  constructor(private httpClient:HttpClient) {
   }
 
   getUser() {
@@ -16,7 +14,7 @@ export class GithubService {
   }
 
   getRepos(){
-    return this.httpClient.get('https://api.github.com/users/technoweenie/repos');
+    return this.httpClient.get('https://api.github.com/users/smileeve/repos');
   }
 
 }
