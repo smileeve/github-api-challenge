@@ -1,0 +1,60 @@
+$main-color: #4c2d8e;
+
+.banner-purple{
+    background-color:  $main-color;
+    color: white;
+    height:100vh;
+    float: left;
+}
+
+.user-image{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+}
+
+.user{
+    margin-bottom: 40px;
+}
+
+.label-group{
+    margin-bottom: 30px;
+}
+
+p{
+    opacity: 0.6;
+    line-height: 0.8;
+}
+
+.repositories{
+    float: left;
+}
+
+.myrepos{
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.repo-title{
+    color:#493090;
+}
+
+div{
+    h5{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.bar-badges{
+    padding-top: 25px;
+}
+
+.bar-badges span{
+    float: left;
+}

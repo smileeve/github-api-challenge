@@ -1,0 +1,45 @@
+<div class="col-3 banner-purple">
+    <div class="col-10 offset-1">
+      <div *ngIf="user.avatar_url">
+            <img class="rounded-circle center-block user-image" src="{{user.avatar_url}}">
+          </div>
+      <div *ngIf="!user.avatar_url">
+        <img class="rounded-circle center-block user-image" src="../../../../../assets/images/default.png">
+      </div>
+    </div>
+    <h4 class="text-center user">{{user.login}}</h4>
+    <div class="label-group">
+        <p class="text-center">Company:</p>
+        <p class="text-center font-weight-light">{{user.company}}</p>
+    </div>
+    <div class="label-group">
+        <p class="text-center">Member since:</p>
+        <p class="text-center font-weight-light">{{user.created_at}}</p>
+    </div>
+    <a href="{{user.html_url}}" class="btn btn-light mx-auto d-block" role="button" >My GitHub profile</a>
+</div>
+<div class="col-9 repositories">
+    <h5 class="text-center">My repositories</h5>
+      
+  <table class="table">
+    <tbody>
+        <tr *ngFor="let repository of repositories"  class="myrepos">
+          <div class="row" >
+            <div class="col-8">
+               <h5><a  class="repo-title" href="{{repository.html_url}}">{{repository.name}}</a></h5>
+               <p>{{repository.description}}</p>
+            </div>
+            <div class="col-4 bar-badges">
+              <span class="badge badge-pill badge-info"> {{repository.watchers}} Watchers</span>
+              <span class="badge badge-pill badge-dark"> {{repository.forks}} Forks</span>
+              <div *ngIf="repository.has_issues" >
+                  <span class="badge badge-pill badge-danger"><i class="fa fa-exclamation-triangle"></i></span>
+              </div>
+            </div>
+          </div>
+        </tr>
+  </tbody>
+  </table>
+  </div>
+  
+
